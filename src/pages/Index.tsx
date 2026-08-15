@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Code2, Palette, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
+import { projects } from "@/data/projects";
+
+const featuredProjects = projects.filter((project) => project.featured);
 
 const Index = () => {
   return (
@@ -13,31 +16,38 @@ const Index = () => {
         <div className="absolute bottom-20 left-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
 
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-3xl">
-            <p className="text-primary font-medium mb-4 tracking-wide uppercase text-sm">
-              Welcome to my portfolio
-            </p>
-            <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-bold text-foreground leading-tight mb-6">
-              Hi, I'm <span className="text-primary">Jing</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-10 max-w-2xl">
-              • A fully-committed Web Developer with a genuine passion for
-              building great digital products.
-              <br></br>• Turning abstract ideas into code is what excites me,
-              and good work comes from constant learning and careful refinement.
-              <br></br>• I want every line of code I write to be worth
-              committing.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Button asChild size="lg" className="group">
-                <Link to="/projects">
-                  View My Work
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link to="/contact">Get In Touch</Link>
-              </Button>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-3xl">
+              <p className="text-primary font-medium mb-4 tracking-wide uppercase text-sm">
+                Welcome to my portfolio
+              </p>
+              <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-bold text-foreground leading-tight mb-6">
+                Hi, I'm <span className="text-primary">Jing</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-10 max-w-2xl">
+                Full-stack web developer building and customising CMS-driven web
+                applications, from PHP backends to React front ends.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button asChild size="lg" className="group">
+                  <Link to="/projects">
+                    View My Work
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                  <Link to="/contact">Get In Touch</Link>
+                </Button>
+              </div>
+            </div>
+
+            <div className="relative hidden lg:block">
+              <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-2xl" />
+              <img
+                src="/coding-time.png"
+                alt="coding time"
+                className="relative rounded-3xl shadow-elevated w-full max-w-lg mx-auto object-cover aspect-video"
+              />
             </div>
           </div>
         </div>
@@ -92,6 +102,58 @@ const Index = () => {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Work */}
+      <section className="py-24">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
+              Featured Work
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              A few projects that show the range of what I build.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {featuredProjects.map((project) => (
+              <Link
+                key={project.slug}
+                to={`/projects/${project.slug}`}
+                className="group bg-card rounded-2xl border border-border/50 overflow-hidden shadow-soft hover:shadow-elevated transition-smooth flex flex-col"
+              >
+                <div
+                  className={`aspect-video bg-gradient-to-br ${project.color} relative overflow-hidden`}
+                >
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="font-display text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-smooth">
+                    {project.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">
+                    {project.description}
+                  </p>
+                  <span className="inline-flex items-center text-sm font-medium text-primary">
+                    View Case Study
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Button asChild variant="outline" size="lg">
+              <Link to="/projects">View All Projects</Link>
+            </Button>
           </div>
         </div>
       </section>

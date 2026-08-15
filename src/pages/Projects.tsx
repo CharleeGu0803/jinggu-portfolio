@@ -1,72 +1,9 @@
 import { ExternalLink, Github } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
+import { projects } from "@/data/projects";
 import React from "react";
-
-const projects = [
-  {
-    title: "Flow Platform",
-    description:
-      "Cell data visualisation and analysis platform providing multiple algorithms, with integrated user and administrator portals.",
-    tags: [
-      "Python (Flask)",
-      "React",
-      "Restful API",
-      "JavaScript",
-      "HTML5",
-      "CSS3",
-    ],
-    image: "/flow-platform.jpg",
-    githubUrl: "https://github.com/Lurker0316/Flow-Platform",
-    color: "from-blue-500/20 to-purple-500/20",
-  },
-  {
-    title: "Scentopia Website",
-    description:
-      "Scentopia is a responsive fragrance experience website that lets users explore scent profiles, interactive content, and personalised recommendations",
-    tags: ["WordPress", "PHP", "HTML5", "CSS3", "Responsive Design"],
-    image: "/scentopia.jpg",
-    demoUrl: "https://scentopia.jinggu.com.au/",
-    color: "from-green-500/20 to-teal-500/20",
-  },
-  {
-    title: "Game of Marrakech",
-    description:
-      "An object-oriented Java implementation of the Marrakech board game, featuring rug placement, player turns, and scoring logic.",
-    tags: ["Java 17", "OOP design", "JUnit for testing", "JavaFX for UI"],
-    image: "/marrakech-game-display.jpg",
-    githubUrl: "https://github.com/CharleeGu0803/Game-of-Marrakech",
-    color: "from-orange-500/20 to-red-500/20",
-  },
-  {
-    title: "CarbonBank Android Application",
-    description:
-      "An Android application designed to help individuals calculate, track, and understand their personal carbon emissions",
-    tags: ["Android", "Java/Kotlin", "UI Components", "Data Modelling"],
-    image: "/carbon-bank-app.jpg",
-    githubUrl:
-      "https://github.com/CharleeGu0803/CarbonBank-Android-Application",
-    color: "from-cyan-500/20 to-blue-500/20",
-  },
-  {
-    title: "Drupal Portfolio Site",
-    description:
-      "A personal portfolio built with Drupal and hosted on Pantheon, showcasing my projects, experiences.",
-    tags: ["Drupal CMS", "Pantheon.io", "HTML5", "CSS3"],
-    image: "/drupal-portfolio.jpg",
-    demoUrl: "https://dev-jing-gu-portfolio.pantheonsite.io",
-    color: "from-pink-500/20 to-rose-500/20",
-  },
-  {
-    title: "Frangrance Website",
-    description:
-      "A multi-page static fragrance website built with HTML, CSS and JavaScript, demonstrating front-end fundamentals and custom layout design.",
-    tags: ["JavaScript", "HTML5", "CSS3"],
-    image: "/fragrance-website.jpg",
-    githubUrl: "https://github.com/CharleeGu0803/Perfume-Website",
-    color: "from-violet-500/20 to-indigo-500/20",
-  },
-];
 
 const Projects = () => {
   return (
@@ -163,12 +100,17 @@ const Projects = () => {
                 {/* Project Info */}
                 <div className="p-6">
                   <h3 className="font-display text-xl font-semibold text-foreground mb-2">
-                    {project.title}
+                    <Link
+                      to={`/projects/${project.slug}`}
+                      className="hover:text-primary transition-smooth"
+                    >
+                      {project.title}
+                    </Link>
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
@@ -178,6 +120,12 @@ const Projects = () => {
                       </span>
                     ))}
                   </div>
+                  <Link
+                    to={`/projects/${project.slug}`}
+                    className="inline-flex items-center text-sm font-medium text-primary hover:underline"
+                  >
+                    View Case Study →
+                  </Link>
                 </div>
               </div>
             ))}

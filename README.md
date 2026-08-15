@@ -91,4 +91,4 @@ src/
 ## Contact
 
 **Jing Gu** — Canberra, ACT
-[jinggu0803@gmail.com](mailto:jinggu0803@gmail.com) · [LinkedIn](https://linkedin.com/in/your-profile) · [GitHub](https://github.com/CharleeGu0803)
+[jinggu0803@gmail.com](mailto:jinggu0803@gmail.com) · [LinkedIn](https://www.linkedin.com/in/jing-gu-4a9580290/) · [GitHub](https://github.com/CharleeGu0803)

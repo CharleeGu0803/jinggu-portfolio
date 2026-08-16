@@ -69,22 +69,22 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                icon: Code2,
-                title: "Website Development",
+                icon: Palette,
+                title: "Front end Development",
                 description:
-                  "Building responsive, content-driven websites with clean structure, strong usability, and long-term maintainability.",
+                  "React, TypeScript, Next.js, JavaScript, SCSS, Material UI, HTML5, CSS3, jQuery, Elementor, WPBakery Page Builder.",
               },
               {
-                icon: Palette,
-                title: "Application Development",
+                icon: Code2,
+                title: "Back end & platforms",
                 description:
-                  "Developing web applications by turning ideas into structured, working systems.",
+                  "PHP, Java, Python (Flask), MySQL, PostgreSQL, WordPress, Drupal.",
               },
               {
                 icon: Sparkles,
-                title: "Data Analysis",
+                title: "Delivery & tooling",
                 description:
-                  "Analysing and visualising data to support clearer decisions and better understanding.",
+                  "CMS, Docker, Figma, AWS, Git, CI/CD, Pytest, Agile.",
               },
             ].map((skill, index) => (
               <div

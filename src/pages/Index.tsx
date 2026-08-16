@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Code2, Palette, Sparkles } from "lucide-react";
+import { ArrowRight, Code2, MapPin, Palette, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import { projects } from "@/data/projects";
@@ -24,9 +24,13 @@ const Index = () => {
               <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-bold text-foreground leading-tight mb-6">
                 Hi, I'm <span className="text-primary">Jing</span>
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-10 max-w-2xl">
+              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-6 max-w-2xl">
                 Full-stack web developer building and customising CMS-driven web
                 applications, from PHP backends to React front ends.
+              </p>
+              <p className="flex items-center gap-2 text-muted-foreground mb-10">
+                <MapPin className="w-4 h-4 text-primary" />
+                Canberra-based · Open to developer roles
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button asChild size="lg" className="group">

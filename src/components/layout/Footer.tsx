@@ -10,7 +10,7 @@ const Footer = () => {
               Jing
             </p>
             <p className="text-sm text-muted-foreground mt-1">
-              Crafting digital experiences with passion
+              Full-stack developer in Canberra
             </p>
           </div>
 

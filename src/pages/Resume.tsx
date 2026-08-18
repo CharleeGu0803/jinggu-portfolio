@@ -1,4 +1,10 @@
-import { Download, Briefcase, GraduationCap, Award } from "lucide-react";
+import {
+  Download,
+  Briefcase,
+  GraduationCap,
+  Award,
+  MapPin,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import { Description } from "@radix-ui/react-toast";
@@ -8,22 +14,38 @@ const experience = [
     title: "Software Developer",
     company: "Agileware",
     period: "Mar 2026 –  Present",
-    description:
-      "Full-stack web development across multiple client sites and platforms, covering front-end builds, back-end CRM configuration, bug fixing and QA.",
+    location: "Canberra",
+    technologies:
+      "PHP, WordPress, Drupal, JavaScript, SCSS, MySQL, Gravity Forms, Docker, Git, WCAG 2.1 AA",
+    highlights: [
+      "Built custom PHP themes and reusable templates with ACF and WPBakery from Figma designs",
+      "Developed dynamic content filtering and search with JavaScript, jQuery, AJAX and MySQL queries",
+      "Remediated WCAG 2.1 AA issues surfaced by Lighthouse and WAVE audits",
+      "Integrated Gravity Forms with an open-source CRM via REST endpoints and webhooks",
+      "Managed Docker-based dev environments, database syncs and Git branching with peer review",
+    ],
   },
   {
-    title: "Web Application Developer",
+    title: "Web Developer Internship",
     company: "ANU Medical School",
     period: "Jul 2024 – Jul 2025",
-    description:
-      "Cell data visualisation and analysis platform providing multiple algorithms to identify and analyse cell populations, with integrated user and administrator portals.",
+    location: "Canberra",
+    technologies:
+      "Python (Flask), SQLAlchemy, JavaScript, ECharts, React, Material UI, RESTful API, Pytest",
+    highlights: [
+      "Built a real-time interactive SPA with ECharts for cell population visualisation",
+      "Designed relational data models with SQL and SQLAlchemy for hierarchical, isolated datasets",
+      "Implemented authentication and account management with Flask and JWT",
+      "Delivered a PDF export feature and unit test coverage with Pytest",
+    ],
   },
   {
-    title: "Software Engineer",
+    title: "Project Coordinator",
     company: "Yimi Information Technology",
     period: "Oct 2022 – Apr 2023",
+    location: "Shanghai",
     description:
-      "Extracted, transformed and analysed user and platform traffic data to support reporting and data-driven business decisions.",
+      "Coordinated delivery of 10 concurrent campaigns using schedules and Gantt charts; managed client communication and published 20 WeChat articles averaging 10,000 readers each.",
   },
 ];
 
@@ -31,22 +53,21 @@ const education = [
   {
     degree: "Master of Computing",
     school: "Australian National University",
-    period: "2023 - 2025",
+    period: "Jul 2023 - Jul 2025",
     // description: "Specialisation in Software Engineering and Data Science.",
   },
   {
     degree: "Bachelor of Arts in Advertising",
     school: "Sichuan Agricultural University",
-    period: "2018 - 2022",
+    period: "Sep 2018 - Jun 2022",
   },
 ];
 
-// const certifications = [
-//   "AWS Certified Developer",
-//   "Google Cloud Professional",
-//   "Meta Frontend Developer",
-//   "MongoDB Certified Developer",
-// ];
+const certifications = [
+  "AWS Certified Developer",
+  "Wordpress Developer",
+  "Google Digital Marketing & E-commerce",
+];
 
 const Resume = () => {
   return (
@@ -98,12 +119,40 @@ const Resume = () => {
                         {job.period}
                       </span>
                     </div>
-                    <p className="text-muted-foreground font-medium mb-2">
-                      {job.company}
-                    </p>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {job.description}
-                    </p>
+                    <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+                      <p className="text-muted-foreground font-medium">
+                        {job.company}
+                      </p>
+                      <span className="flex items-center gap-1 text-sm text-muted-foreground pr-3">
+                        <MapPin className="w-3 h-3" />
+                        {job.location}
+                      </span>
+                    </div>
+                    {job.description && (
+                      <p className="text-muted-foreground text-sm leading-relaxed">
+                        {job.description}
+                      </p>
+                    )}
+                    {job.technologies && (
+                      <p className="text-muted-foreground text-sm leading-relaxed mb-2">
+                        <span className="font-medium text-foreground">
+                          Technologies:
+                        </span>{" "}
+                        {job.technologies}
+                      </p>
+                    )}
+                    {job.highlights && (
+                      <ul className="list-disc list-outside pl-5 space-y-1">
+                        {job.highlights.map((highlight, i) => (
+                          <li
+                            key={i}
+                            className="text-muted-foreground text-sm leading-relaxed"
+                          >
+                            {highlight}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 </div>
               ))}
@@ -157,16 +206,16 @@ const Resume = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-3 mb-10">
-              {/* <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
                 <Award className="w-6 h-6 text-primary" />
-              </div> */}
-              {/* <h2 className="font-display text-3xl font-bold text-foreground">
+              </div>
+              <h2 className="font-display text-3xl font-bold text-foreground">
                 Certifications
-              </h2> */}
+              </h2>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4">
-              {/* {certifications.map((cert, index) => (
+              {certifications.map((cert, index) => (
                 <div
                   key={index}
                   className="flex items-center gap-3 bg-card p-4 rounded-xl border border-border/50 shadow-soft"
@@ -174,7 +223,7 @@ const Resume = () => {
                   <Award className="w-5 h-5 text-accent flex-shrink-0" />
                   <span className="text-foreground font-medium">{cert}</span>
                 </div>
-              ))} */}
+              ))}
             </div>
           </div>
         </div>

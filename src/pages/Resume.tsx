@@ -82,9 +82,11 @@ const Resume = () => {
             <p className="text-xl text-muted-foreground mb-8">
               My professional journey and qualifications
             </p>
-            <Button size="lg" className="gap-2">
-              <Download className="w-4 h-4" />
-              Download CV
+            <Button size="lg" className="gap-2" asChild>
+              <a href="/Jing-Gu-CV.pdf" download="Jing-Gu-CV.pdf">
+                <Download className="w-4 h-4" />
+                Download CV
+              </a>
             </Button>
           </div>
         </div>

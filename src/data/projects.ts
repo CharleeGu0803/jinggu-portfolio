@@ -1,6 +1,8 @@
 import type { ProjectContentBlock } from "./project-content/types";
 import { porkstarContent } from "./project-content/porkstar";
 import { canberrarepContent } from "./project-content/canberrarep";
+import { flowPlatformContent } from "./project-content/flow-platform";
+import { gameOfMarrakechContent } from "./project-content/game-of-marrakech";
 
 export interface Project {
   slug: string;
@@ -72,19 +74,18 @@ export const projects: Project[] = [
     slug: "flow-platform",
     title: "Flow Platform",
     description:
-      "Cell data visualisation and analysis platform providing multiple algorithms, with integrated user and administrator portals.",
-    longDescription: [
-      "Flow Platform is a data visualisation and analysis tool built for working with cell data, giving researchers a way to run multiple analysis algorithms and explore the results visually rather than through raw output files.",
-      "The backend is built with Python and Flask, exposing a RESTful API that the React front end consumes. I designed both the user-facing portal, where results can be explored and visualised, and an administrator portal for managing accounts and data access.",
-      "The project involved balancing a data-heavy backend with a front end that stays responsive while rendering visualisations, and structuring the API so new algorithms could be added without reworking the client.",
-    ],
+      "An online analysis and visualisation platform for flow cytometry data, built for medical researchers.nData is organised as dataset, batch and file, and a saved gate can be applied across an entire batch and exported as a PDF report.",
+    content: flowPlatformContent,
     tags: [
-      "Python (Flask)",
-      "React",
-      "Restful API",
-      "JavaScript",
-      "HTML5",
-      "CSS3",
+      "Python",
+      "Flask",
+      "Jinja2",
+      "SQLAlchemy",
+      "NumPy",
+      "SciPy",
+      "pandas",
+      "matplotlib",
+      "reportlab",
     ],
     image: "/flow-platform.jpg",
     demoNote:
@@ -112,13 +113,9 @@ export const projects: Project[] = [
     slug: "game-of-marrakech",
     title: "Game of Marrakech",
     description:
-      "An object-oriented Java implementation of the Marrakech board game, featuring rug placement, player turns, and scoring logic.",
-    longDescription: [
-      "This project is a full implementation of the Marrakech board game in Java, covering the complete rule set: rug placement, player movement, turn order, and scoring.",
-      "The focus was on clean object-oriented design — modelling the board, players, and rugs as distinct classes with clear responsibilities — and on JavaFX for the interactive UI layer.",
-      "I used JUnit throughout to test game logic in isolation from the UI, which made it much easier to catch scoring and rule edge cases before they showed up on screen.",
-    ],
-    tags: ["Java 17", "OOP design", "JUnit for testing", "JavaFX for UI"],
+      "Marrakech is a board game for two to four players. Players take turns rotating Assam, the market owner, rolling a die to move him, and laying rugs around him. An ANU COMP1110 team assignment, built in Java 17 and JavaFX with the full ruleset and a graphical interface.",
+    content: gameOfMarrakechContent,
+    tags: ["Java 17", "JavaFX", "JUnit", "Git", "GitLab CI"],
     image: "/marrakech-game-display.jpg",
     githubUrl: "https://github.com/CharleeGu0803/Game-of-Marrakech",
     color: "from-orange-500/20 to-red-500/20",
@@ -154,20 +151,5 @@ export const projects: Project[] = [
     image: "/drupal-portfolio.jpg",
     demoUrl: "https://dev-jing-gu-portfolio.pantheonsite.io",
     color: "from-pink-500/20 to-rose-500/20",
-  },
-  {
-    slug: "fragrance-website",
-    title: "Frangrance Website",
-    description:
-      "A multi-page static fragrance website built with HTML, CSS and JavaScript, demonstrating front-end fundamentals and custom layout design.",
-    longDescription: [
-      "A multi-page static fragrance website built from scratch with HTML, CSS, and JavaScript, without a framework or CMS underneath it.",
-      "The goal was to practise front-end fundamentals directly — layout, responsive behaviour, and interactivity — and to design a custom look rather than starting from a template.",
-      "It's an earlier project, but it's where a lot of the layout instincts I still use started to form.",
-    ],
-    tags: ["JavaScript", "HTML5", "CSS3"],
-    image: "/fragrance-website.jpg",
-    githubUrl: "https://github.com/CharleeGu0803/Perfume-Website",
-    color: "from-violet-500/20 to-indigo-500/20",
   },
 ];

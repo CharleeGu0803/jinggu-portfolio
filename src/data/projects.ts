@@ -3,6 +3,7 @@ import { porkstarContent } from "./project-content/porkstar";
 import { canberrarepContent } from "./project-content/canberrarep";
 import { flowPlatformContent } from "./project-content/flow-platform";
 import { gameOfMarrakechContent } from "./project-content/game-of-marrakech";
+import { carbonbankContent } from "./project-content/carbonbank";
 
 export interface Project {
   slug: string;
@@ -93,27 +94,27 @@ export const projects: Project[] = [
     color: "from-blue-500/20 to-purple-500/20",
     featured: true,
   },
-  {
-    slug: "scentopia-website",
-    title: "Scentopia Website",
-    description:
-      "Scentopia is a responsive fragrance experience website that lets users explore scent profiles, interactive content, and personalised recommendations",
-    longDescription: [
-      "Scentopia is a live client website built to give visitors an interactive way to explore fragrance profiles online, extending an in-person scent experience into the browser.",
-      "Built on WordPress with custom PHP templating, the site had to stay easy for non-technical stakeholders to update while still supporting a custom, content-driven layout rather than a generic theme.",
-      "I focused on responsive design across devices and on keeping page structure clean so new scent profiles and content could be added without breaking the layout.",
-    ],
-    tags: ["WordPress", "PHP", "HTML5", "CSS3", "Responsive Design"],
-    image: "/scentopia.jpg",
-    demoUrl: "https://scentopia.jinggu.com.au/",
-    color: "from-green-500/20 to-teal-500/20",
-    featured: false,
-  },
+  // {
+  //   slug: "scentopia-website",
+  //   title: "Scentopia Website",
+  //   description:
+  //     "Scentopia is a responsive fragrance experience website that lets users explore scent profiles, interactive content, and personalised recommendations",
+  //   longDescription: [
+  //     "Scentopia is a live client website built to give visitors an interactive way to explore fragrance profiles online, extending an in-person scent experience into the browser.",
+  //     "Built on WordPress with custom PHP templating, the site had to stay easy for non-technical stakeholders to update while still supporting a custom, content-driven layout rather than a generic theme.",
+  //     "I focused on responsive design across devices and on keeping page structure clean so new scent profiles and content could be added without breaking the layout.",
+  //   ],
+  //   tags: ["WordPress", "PHP", "HTML5", "CSS3", "Responsive Design"],
+  //   image: "/scentopia.jpg",
+  //   demoUrl: "https://scentopia.jinggu.com.au/",
+  //   color: "from-green-500/20 to-teal-500/20",
+  //   featured: false,
+  // },
   {
     slug: "game-of-marrakech",
     title: "Game of Marrakech",
     description:
-      "Marrakech is a board game for two to four players. Players take turns rotating Assam, the market owner, rolling a die to move him, and laying rugs around him. An ANU COMP1110 team assignment, built in Java 17 and JavaFX with the full ruleset and a graphical interface.",
+      "Marrakech is a board game for two to four players. Players take turns rotating Assam, the market owner, rolling a die to move him, and laying rugs around him. Built in Java 17 and JavaFX with the full ruleset and a graphical interface.",
     content: gameOfMarrakechContent,
     tags: ["Java 17", "JavaFX", "JUnit", "Git", "GitLab CI"],
     image: "/marrakech-game-display.jpg",
@@ -124,13 +125,18 @@ export const projects: Project[] = [
     slug: "carbonbank-android-application",
     title: "CarbonBank Android Application",
     description:
-      "An Android application designed to help individuals calculate, track, and understand their personal carbon emissions",
-    longDescription: [
-      "CarbonBank is an Android app that helps individuals calculate and track their personal carbon emissions, turning an abstract number into something people can monitor over time.",
-      "I worked on the Android UI components and the data model behind emissions tracking, aiming for an interface that makes entering everyday activity data quick rather than a chore.",
-      "The bigger challenge was designing a data model flexible enough to cover different emission sources while keeping the calculation logic simple to reason about and extend.",
+      "CarbonBank is an Android app for tracking carbon emissions. Users log their daily travel mode and duration, the app converts that into an emissions figure.",
+    content: carbonbankContent,
+    tags: [
+      "Java 17",
+      "Android SDK 34",
+      "Material Components",
+      "ViewPager",
+      "RecyclerView",
+      "Firebase",
+      "Gson",
+      "Gradle",
     ],
-    tags: ["Android", "Java/Kotlin", "UI Components", "Data Modelling"],
     image: "/carbon-bank-app.jpg",
     githubUrl:
       "https://github.com/CharleeGu0803/CarbonBank-Android-Application",

@@ -15,6 +15,10 @@ export interface Project {
   demoUrl?: string;
   /** Overrides the default "Demo" / "View Demo" link text, e.g. "Website" for a live production site. */
   demoLabel?: string;
+  /** Shown in a note block when demoUrl is absent, explaining why, e.g. "Coursework project, no live demo". */
+  demoNote?: string;
+  /** Shown in a note block when githubUrl is absent, explaining why, e.g. "Client project, source not public". */
+  githubNote?: string;
   color: string;
   /* Whether this project should be highlighted in the featured projects section. true: highlighted */
   featured?: boolean;
@@ -38,6 +42,7 @@ export const projects: Project[] = [
       "DDEV",
     ],
     image: "/canberra-rep-home.jpg",
+    demoNote: "Deployment in progress,live website coming soon",
     color: "from-blue-500/20 to-purple-500/20",
     featured: true,
   },
@@ -82,7 +87,8 @@ export const projects: Project[] = [
       "CSS3",
     ],
     image: "/flow-platform.jpg",
-    githubUrl: "https://github.com/Lurker0316/Flow-Platform",
+    demoNote:
+      "In production use by internal research staff. Access and source are restricted.",
     color: "from-blue-500/20 to-purple-500/20",
     featured: true,
   },

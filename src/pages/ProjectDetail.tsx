@@ -1,5 +1,5 @@
 import { Link, useParams, Navigate } from "react-router-dom";
-import { ArrowLeft, ExternalLink, Github } from "lucide-react";
+import { ArrowLeft, ExternalLink, Github, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import { projects } from "@/data/projects";
@@ -56,6 +56,15 @@ const ProjectDetail = () => {
                 </Button>
               )}
             </div>
+            {(project.demoNote || project.githubNote) && (
+              <div className="mt-6 rounded-lg border border-border bg-secondary/40 px-4 py-3 flex gap-3">
+                <Info className="w-4 h-4 mt-0.5 text-muted-foreground shrink-0" />
+                <div className="space-y-1 text-sm text-muted-foreground">
+                  {project.demoNote && <p>{project.demoNote}</p>}
+                  {project.githubNote && <p>{project.githubNote}</p>}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>

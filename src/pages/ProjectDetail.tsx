@@ -1,5 +1,5 @@
 import { Link, useParams, Navigate } from "react-router-dom";
-import { ArrowLeft, ExternalLink, Github } from "lucide-react";
+import { ArrowLeft, ExternalLink, Github, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import { projects } from "@/data/projects";
@@ -39,7 +39,7 @@ const ProjectDetail = () => {
                     rel="noopener noreferrer"
                   >
                     <ExternalLink className="w-4 h-4" />
-                    View Demo
+                    View {project.demoLabel ?? "Demo"}
                   </a>
                 </Button>
               )}
@@ -56,6 +56,15 @@ const ProjectDetail = () => {
                 </Button>
               )}
             </div>
+            {(project.demoNote || project.githubNote) && (
+              <div className="mt-6 rounded-lg border border-border bg-secondary/40 px-4 py-3 flex gap-3">
+                <Info className="w-4 h-4 mt-0.5 text-muted-foreground shrink-0" />
+                <div className="space-y-1 text-sm text-muted-foreground">
+                  {project.demoNote && <p>{project.demoNote}</p>}
+                  {project.githubNote && <p>{project.githubNote}</p>}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -75,14 +84,41 @@ const ProjectDetail = () => {
 
             <div className="grid md:grid-cols-3 gap-12">
               <div className="md:col-span-2 space-y-6">
-                {project.longDescription.map((paragraph, index) => (
-                  <p
-                    key={index}
-                    className="text-muted-foreground leading-relaxed text-lg"
-                  >
-                    {paragraph}
-                  </p>
-                ))}
+                {project.content
+                  ? project.content.map((block, index) =>
+                      block.type === "heading" ? (
+                        block.level === 2 ? (
+                          <h2
+                            key={index}
+                            className="font-display text-2xl font-semibold text-foreground"
+                          >
+                            {block.text}
+                          </h2>
+                        ) : (
+                          <h3
+                            key={index}
+                            className="font-display text-lg font-semibold text-foreground"
+                          >
+                            {block.text}
+                          </h3>
+                        )
+                      ) : (
+                        <p
+                          key={index}
+                          className="text-muted-foreground leading-relaxed text-lg"
+                        >
+                          {block.text}
+                        </p>
+                      )
+                    )
+                  : project.longDescription?.map((paragraph, index) => (
+                      <p
+                        key={index}
+                        className="text-muted-foreground leading-relaxed text-lg"
+                      >
+                        {paragraph}
+                      </p>
+                    ))}
               </div>
 
               <div>

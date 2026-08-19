@@ -1,5 +1,6 @@
 import type { ProjectContentBlock } from "./project-content/types";
 import { porkstarContent } from "./project-content/porkstar";
+import { canberrarepContent } from "./project-content/canberrarep";
 
 export interface Project {
   slug: string;
@@ -20,6 +21,26 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    slug: "canberra-rep",
+    title: "Canberra REP",
+    description:
+      "A full rebuild of the website for Australia's oldest community theatre: migrated from Drupal 7 to WordPress, redesigned end to end, and handed over as a site the client's content team maintains on its own.",
+    content: canberrarepContent,
+    tags: [
+      "WordPress",
+      "Elementor",
+      "Gravity Forms",
+      "PHP",
+      "ACF",
+      "JavaScript",
+      "Git",
+      "DDEV",
+    ],
+    image: "/canberra-rep-home.jpg",
+    color: "from-blue-500/20 to-purple-500/20",
+    featured: true,
+  },
   {
     slug: "pork-star",
     title: "PorkStar",
@@ -79,7 +100,7 @@ export const projects: Project[] = [
     image: "/scentopia.jpg",
     demoUrl: "https://scentopia.jinggu.com.au/",
     color: "from-green-500/20 to-teal-500/20",
-    featured: true,
+    featured: false,
   },
   {
     slug: "game-of-marrakech",

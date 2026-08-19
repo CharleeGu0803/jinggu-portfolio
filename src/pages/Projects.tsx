@@ -58,43 +58,45 @@ const Projects = () => {
                       Code
                     </Button>
                   </div> */}
-                  <div className="absolute inset-0 bg-foreground/80 opacity-0 group-hover:opacity-100 transition-smooth flex items-center justify-center gap-4">
-                    {project.demoUrl && (
-                      <Button
-                        asChild
-                        size="sm"
-                        variant="secondary"
-                        className="gap-2"
-                      >
-                        <a
-                          href={project.demoUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                  {(project.demoUrl || project.githubUrl) && (
+                    <div className="absolute inset-0 bg-foreground/80 opacity-0 group-hover:opacity-100 transition-smooth flex items-center justify-center gap-4">
+                      {project.demoUrl && (
+                        <Button
+                          asChild
+                          size="sm"
+                          variant="secondary"
+                          className="gap-2"
                         >
-                          <ExternalLink className="w-4 h-4" />
-                          {project.demoLabel ?? "Demo"}
-                        </a>
-                      </Button>
-                    )}
+                          <a
+                            href={project.demoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <ExternalLink className="w-4 h-4" />
+                            {project.demoLabel ?? "Demo"}
+                          </a>
+                        </Button>
+                      )}
 
-                    {project.githubUrl && (
-                      <Button
-                        asChild
-                        size="sm"
-                        variant="secondary"
-                        className="gap-2"
-                      >
-                        <a
-                          href={project.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                      {project.githubUrl && (
+                        <Button
+                          asChild
+                          size="sm"
+                          variant="secondary"
+                          className="gap-2"
                         >
-                          <Github className="w-4 h-4" />
-                          Code
-                        </a>
-                      </Button>
-                    )}
-                  </div>
+                          <a
+                            href={project.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Github className="w-4 h-4" />
+                            Code
+                          </a>
+                        </Button>
+                      )}
+                    </div>
+                  )}
                 </div>
 
                 {/* Project Info */}

@@ -139,7 +139,7 @@ const Index = () => {
                   />
                 </div>
                 <div className="p-6 flex flex-col flex-1">
-                  <h3 className="font-display text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-smooth">
+                  <h3 className="font-display text-xl font-semibold text-foreground mb-2 group-hover:text-primary group-hover:underline underline-offset-4 decoration-2 transition-smooth">
                     {project.title}
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">

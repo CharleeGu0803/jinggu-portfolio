@@ -5,14 +5,17 @@ import Layout from "@/components/layout/Layout";
 import { designWorks } from "@/data/design-works";
 
 const screenAnchorId = (label: string) =>
-  `screen-${label.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`;
+  `screen-${label
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "")}`;
 
 const DesignDetail = () => {
   const { slug } = useParams();
   const work = designWorks.find((w) => w.slug === slug);
 
   if (!work) {
-    return <Navigate to="/projects" replace />;
+    return <Navigate to="/design" replace />;
   }
 
   return (
@@ -21,11 +24,11 @@ const DesignDetail = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <Link
-              to="/projects"
+              to="/design"
               className="inline-flex items-center text-sm text-muted-foreground hover:text-primary transition-smooth mb-8"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Projects
+              Back to Designs
             </Link>
             <h1 className="font-display text-4xl md:text-6xl font-bold text-foreground mb-6">
               {work.title}
@@ -74,7 +77,7 @@ const DesignDetail = () => {
                 >
                   {block.text}
                 </p>
-              )
+              ),
             )}
           </div>
         </div>
@@ -83,12 +86,15 @@ const DesignDetail = () => {
       {work.screens.length > 0 && (
         <section className="pb-8">
           <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto flex flex-wrap gap-2 sticky top-20 z-10 bg-background/95 backdrop-blur py-3">
+            <div className="max-w-4xl mx-auto flex flex-wrap items-center gap-2 sticky top-20 z-10 bg-background/95 backdrop-blur py-3">
+              <span className="text-base font-medium text-muted-foreground mr-1">
+                Jump to:
+              </span>
               {work.screens.map((screen) => (
                 <a
                   key={screen.label}
                   href={`#${screenAnchorId(screen.label)}`}
-                  className="text-sm font-medium px-4 py-2 rounded-full border border-border/50 text-muted-foreground hover:text-primary hover:border-primary transition-smooth"
+                  className="text-sm font-semibold px-4 py-2 rounded-lg bg-secondary text-foreground border-b-[3px] border-primary/60 shadow-sm hover:bg-primary hover:text-primary-foreground hover:border-primary hover:-translate-y-0.5 active:translate-y-0 transition-smooth"
                 >
                   {screen.label}
                 </a>
@@ -112,13 +118,18 @@ const DesignDetail = () => {
               <div
                 className={`rounded-2xl bg-gradient-to-br ${work.color} relative overflow-hidden shadow-elevated`}
               >
-                <img
-                  src={screen.image}
-                  alt={`${work.title} — ${screen.label}`}
-                  className="w-full h-auto"
-                  loading="lazy"
-                />
+                <div className="max-h-[75vh] overflow-y-auto">
+                  <img
+                    src={screen.image}
+                    alt={`${work.title} — ${screen.label}`}
+                    className="w-full h-auto block"
+                    loading="lazy"
+                  />
+                </div>
               </div>
+              <p className="text-muted-foreground/70 text-xs mt-2">
+                Scroll within the frame to view the full page.
+              </p>
               {screen.caption && (
                 <p className="text-muted-foreground text-sm mt-4">
                   {screen.caption}

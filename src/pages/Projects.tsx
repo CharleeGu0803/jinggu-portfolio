@@ -102,7 +102,7 @@ const Projects = () => {
                   <h3 className="font-display text-xl font-semibold text-foreground mb-2">
                     <Link
                       to={`/projects/${project.slug}`}
-                      className="hover:text-primary transition-smooth"
+                      className="hover:text-primary hover:underline underline-offset-4 decoration-2 transition-smooth"
                     >
                       {project.title}
                     </Link>

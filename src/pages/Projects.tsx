@@ -72,7 +72,7 @@ const Projects = () => {
                           rel="noopener noreferrer"
                         >
                           <ExternalLink className="w-4 h-4" />
-                          Demo
+                          {project.demoLabel ?? "Demo"}
                         </a>
                       </Button>
                     )}

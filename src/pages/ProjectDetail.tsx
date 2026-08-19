@@ -39,7 +39,7 @@ const ProjectDetail = () => {
                     rel="noopener noreferrer"
                   >
                     <ExternalLink className="w-4 h-4" />
-                    View Demo
+                    View {project.demoLabel ?? "Demo"}
                   </a>
                 </Button>
               )}
@@ -75,14 +75,41 @@ const ProjectDetail = () => {
 
             <div className="grid md:grid-cols-3 gap-12">
               <div className="md:col-span-2 space-y-6">
-                {project.longDescription.map((paragraph, index) => (
-                  <p
-                    key={index}
-                    className="text-muted-foreground leading-relaxed text-lg"
-                  >
-                    {paragraph}
-                  </p>
-                ))}
+                {project.content
+                  ? project.content.map((block, index) =>
+                      block.type === "heading" ? (
+                        block.level === 2 ? (
+                          <h2
+                            key={index}
+                            className="font-display text-2xl font-semibold text-foreground"
+                          >
+                            {block.text}
+                          </h2>
+                        ) : (
+                          <h3
+                            key={index}
+                            className="font-display text-lg font-semibold text-foreground"
+                          >
+                            {block.text}
+                          </h3>
+                        )
+                      ) : (
+                        <p
+                          key={index}
+                          className="text-muted-foreground leading-relaxed text-lg"
+                        >
+                          {block.text}
+                        </p>
+                      )
+                    )
+                  : project.longDescription?.map((paragraph, index) => (
+                      <p
+                        key={index}
+                        className="text-muted-foreground leading-relaxed text-lg"
+                      >
+                        {paragraph}
+                      </p>
+                    ))}
               </div>
 
               <div>

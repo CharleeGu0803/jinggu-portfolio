@@ -1,17 +1,47 @@
+import type { ProjectContentBlock } from "./project-content/types";
+import { porkstarContent } from "./project-content/porkstar";
+
 export interface Project {
   slug: string;
   title: string;
   description: string;
-  longDescription: string[];
+  /** Simple prose paragraphs. Use `content` instead for structured write-ups with headings. */
+  longDescription?: string[];
+  content?: ProjectContentBlock[];
   tags: string[];
   image: string;
   githubUrl?: string;
   demoUrl?: string;
+  /** Overrides the default "Demo" / "View Demo" link text, e.g. "Website" for a live production site. */
+  demoLabel?: string;
   color: string;
+  /* Whether this project should be highlighted in the featured projects section. true: highlighted */
   featured?: boolean;
 }
 
 export const projects: Project[] = [
+  {
+    slug: "pork-star",
+    title: "PorkStar",
+    description:
+      "A recipe and video platform for Australian Pork's foodservice program: researched, designed, and built on WordPress with a custom PHP theme and a modular architecture the client maintains independently.",
+    content: porkstarContent,
+    tags: [
+      "WordPress",
+      "PHP",
+      "ACF",
+      "WPBakery",
+      "JavaScript",
+      "Foundation",
+      "Git",
+      "DDEV",
+    ],
+    image: "/porkstar-recipe.jpg",
+    demoUrl: "https://www.porkstar.com.au/",
+    demoLabel: "Website",
+    color: "from-green-500/20 to-teal-500/20",
+    featured: true,
+  },
   {
     slug: "flow-platform",
     title: "Flow Platform",
@@ -81,7 +111,7 @@ export const projects: Project[] = [
     githubUrl:
       "https://github.com/CharleeGu0803/CarbonBank-Android-Application",
     color: "from-cyan-500/20 to-blue-500/20",
-    featured: true,
+    featured: false,
   },
   {
     slug: "drupal-portfolio-site",

@@ -1,5 +1,5 @@
 import { Link, useParams, Navigate } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import { designWorks } from "@/data/design-works";
@@ -86,7 +86,10 @@ const DesignDetail = () => {
       {work.screens.length > 0 && (
         <section className="pb-8">
           <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto flex flex-wrap items-center gap-2 sticky top-20 z-10 bg-background/95 backdrop-blur py-3">
+            <div
+              id="screen-tabs"
+              className="max-w-4xl mx-auto flex flex-wrap items-center gap-2 sticky top-20 z-10 bg-background/95 backdrop-blur py-3 scroll-mt-20"
+            >
               <span className="text-base font-medium text-muted-foreground mr-1">
                 Jump to:
               </span>
@@ -112,9 +115,19 @@ const DesignDetail = () => {
         >
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
-              <h2 className="font-display text-2xl font-semibold text-foreground mb-6">
-                {screen.label}
-              </h2>
+              <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
+                <h2 className="font-display text-2xl font-semibold text-foreground">
+                  {screen.label}
+                </h2>
+                {work.screens.length > 1 && (
+                  <Button asChild variant="outline" size="sm" className="gap-1.5">
+                    <a href="#screen-tabs">
+                      <ArrowUp className="w-3.5 h-3.5" />
+                      Back to tabs
+                    </a>
+                  </Button>
+                )}
+              </div>
               <div
                 className={`rounded-2xl bg-gradient-to-br ${work.color} relative overflow-hidden shadow-elevated`}
               >

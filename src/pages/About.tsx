@@ -32,12 +32,12 @@ const About = () => {
       {/* Story Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="relative">
+          <div className="grid lg:grid-cols-[minmax(0,360px)_1fr] gap-16 items-center">
+            <div className="relative w-full max-w-[280px] mx-auto lg:mx-0 lg:ml-auto">
               <div className="aspect-[4/5] bg-gradient-to-br from-primary/20 via-secondary to-accent/20 rounded-3xl overflow-hidden shadow-elevated">
                 <div className="aspect-[4/5] rounded-1xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 ">
                   <img
-                    src="/jing-with-cat-shelly.jpg"
+                    src="/jing-professional-photo.png"
                     alt="Jing profile photo"
                     className="w-full h-full object-cover"
                   />

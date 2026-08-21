@@ -59,47 +59,37 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Hello, I’m Jing. I’m a developer with nearly 2 years of
-                  experience in IT, and I enjoy turning ideas into digital
-                  products that are clear, practical, and built to last.
+                  I'm a developer based in Canberra, working across the
+                  front-end and back-end. I build interfaces with React and
+                  TypeScript, handle business logic in Python, and have spent a
+                  good deal of time inside content management systems such as
+                  Drupal, WordPress and CiviCRM. In that kind of work the
+                  interesting problem is rarely the code itself. It's building
+                  something non-technical people can maintain over the long term
+                  without breaking it six months later.
                 </p>
                 <p>
-                  My journey into the IT field started with a very simple
-                  curiosity: “Why does so much happen when you click a single
-                  button?” As I continued to learn by doing, that curiosity
-                  gradually turned into genuine passion. I began building
-                  projects independently, working through page structure,
-                  interaction design, data handling, deployment, and slowly
-                  bringing abstract ideas into real, working products.
+                  I came to software from advertising, and the crossover point
+                  was data. In my first role I was pulling and cleaning platform
+                  traffic data to work out what people actually did on a page,
+                  as opposed to what we assumed they did. The analysis was the
+                  interesting part, but writing the scripts that made it
+                  possible turned out to be more interesting still, and that's
+                  what sent me back to study. The advertising years didn't go to
+                  waste either. Four years of thinking about how people read a
+                  page, what they notice first, and where they give up is why I
+                  care about interface detail, and why I'd rather write
+                  documentation someone can actually follow than leave a
+                  colleague guessing.
                 </p>
                 <p>
-                  Throughout my development work, I’ve gained experience across
-                  both front-end and back-end. I use React and TypeScript to
-                  build responsive user interfaces, Python to handle business
-                  logic, and I’ve also worked with content management systems
-                  such as WordPress and Drupal, where I focus on making content
-                  easier to edit, manage, and maintain over time.
-                </p>
-                <p>
-                  My working style is practical and communication-focused. I
-                  enjoy breaking problems down, discussing requirements with
-                  others, aligning on direction, and moving forward step by
-                  step. To me, writing code is never an isolated task. it’s an
-                  ongoing process of collaboration, feedback, and refinement.
-                </p>
-                <p>
-                  Of course, my development routine isn’t only about code. Quite
-                  often, my thinking is interrupted by my cat Shelly, appearing
-                  on my keyboard or quietly sitting beside me. These small,
-                  unplanned pauses often help me step back, look at problems
-                  from a different angle, and remind me to stay patient and
-                  balanced while doing focused work.
-                </p>
-                <p>
-                  I’m now looking to join a friendly, grounded, and
-                  collaborative team, where I can continue to grow through
-                  real-world projects and contribute long-term value to both
-                  users and the people I work with.
+                  I'm continually broadening my skill set, working towards
+                  becoming a well-rounded full-stack developer who can build a
+                  considered interface and handle the logic and data behind it
+                  just as carefully. What I'm looking for is a team where I can
+                  keep growing through real projects, where questions are
+                  welcome, and where doing the work properly counts for more
+                  than doing it quickly.
                 </p>
               </div>
             </div>

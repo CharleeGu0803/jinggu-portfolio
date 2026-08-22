@@ -65,7 +65,7 @@ export const projects: Project[] = [
       "Git",
       "DDEV",
     ],
-    image: "/porkstar-recipe.jpg",
+    image: "/porkstar-recipe.webp",
     demoUrl: "https://www.porkstar.com.au/",
     demoLabel: "Website",
     color: "from-green-500/20 to-teal-500/20",

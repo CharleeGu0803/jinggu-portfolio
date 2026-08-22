@@ -142,17 +142,17 @@ export const designWorks: DesignWork[] = [
       },
     ],
     tags: ["Figma", "UI Design", "Art Direction", "Responsive"],
-    coverImage: "/pork-star-cover.jpg",
+    coverImage: "/pork-star-cover.webp",
     screens: [
       {
         label: "Homepage",
-        image: "/pork-star-home.png",
+        image: "/pork-star-home.webp",
         caption:
           "Content bands for events, recipes and industry tools, with the navigation open.",
       },
       {
         label: "Campaign Page",
-        image: "/pork-star-campaign.png",
+        image: "/pork-star-campaign.webp",
         caption:
           "Current campaign, featured chef and an archive of past campaigns.",
       },

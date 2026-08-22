@@ -2,13 +2,13 @@ import { CheckCircle2 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 
 const skills = [
-  "Drupal",
   "React",
-  "Wordpress",
+  "Drupal",
+  "WordPress",
+  "PHP",
   "Java",
   "Python",
-  "PostgresQL DB",
-  "ETL Pipelines",
+  "PostgreSQL",
   "API Development",
 ];
 
@@ -88,8 +88,7 @@ const About = () => {
                   considered interface and handle the logic and data behind it
                   just as carefully. What I'm looking for is a team where I can
                   keep growing through real projects, where questions are
-                  welcome, and where doing the work properly counts for more
-                  than doing it quickly.
+                  welcome, and where I can contribute from early on.
                 </p>
               </div>
             </div>
@@ -131,19 +130,19 @@ const About = () => {
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
-                  title: "Work Hard, Play Harder",
+                  title: "Readable over clever",
                   description:
-                    "I take my work seriously and give it my full focus, but I also believe that rest and balance matter. Staying curious, relaxed helps me do better work in the long run.",
+                    "Code gets read far more often than it gets written. If a colleague has to work out what I meant, I've made their job harder to make mine feel smarter.",
                 },
                 {
-                  title: "Collaboration",
+                  title: "Ask Early",
                   description:
-                    "Great things happen when minds come together. I value open communication and teamwork.",
+                    "I'd rather ask a question on day one than rebuild on day five. Checking a requirement takes five minutes. Building the wrong thing takes a fortnight.",
                 },
                 {
-                  title: "Lifelong Learning",
+                  title: "Leave it documented",
                   description:
-                    "Continuous learning is key. I'm always exploring new technologies and methodologies.",
+                    "The next person shouldn't have to reverse-engineer my reasoning, and often the next person is me, eight months later, with no memory of any of it.",
                 },
               ].map((value, index) => (
                 <div key={index} className="text-center">

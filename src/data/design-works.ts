@@ -97,23 +97,29 @@ export const designWorks: DesignWork[] = [
       "Information Architecture",
       "UX Writing",
     ],
-    coverImage: "/agileware-cover.jpg",
+    coverImage: "/agileware-cover.webp",
     screens: [
       {
         label: "Homepage",
-        image: "/agileware-home.png",
+        image: "/agileware-home.webp",
         caption:
           "Service entry points framed as client questions, with case studies and resources.",
       },
       {
+        label: "CiviCRM Page",
+        image: "/agileware-civicrm.webp",
+        caption:
+          "CiviCRM services: lifecycle breakdown, migration steps, partner credentials and a case study.",
+      },
+      {
         label: "Service Page",
-        image: "/agileware-service.png",
+        image: "/agileware-service.webp",
         caption:
           "Member portals: capabilities, systems diagram, case study and FAQs.",
       },
       {
         label: "Contact Page",
-        image: "/agileware-contact-us.png",
+        image: "/agileware-contact-us.webp",
         caption: "Enquiry form with routing fields, alongside contact details.",
       },
     ],

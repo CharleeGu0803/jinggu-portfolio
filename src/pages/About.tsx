@@ -2,13 +2,13 @@ import { CheckCircle2 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 
 const skills = [
-  "Drupal",
   "React",
-  "Wordpress",
+  "Drupal",
+  "WordPress",
+  "PHP",
   "Java",
   "Python",
-  "PostgresQL DB",
-  "ETL Pipelines",
+  "PostgreSQL",
   "API Development",
 ];
 
@@ -32,12 +32,12 @@ const About = () => {
       {/* Story Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="relative">
+          <div className="grid lg:grid-cols-[minmax(0,360px)_1fr] gap-16 items-center">
+            <div className="relative w-full max-w-[280px] mx-auto lg:mx-0 lg:ml-auto">
               <div className="aspect-[4/5] bg-gradient-to-br from-primary/20 via-secondary to-accent/20 rounded-3xl overflow-hidden shadow-elevated">
                 <div className="aspect-[4/5] rounded-1xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 ">
                   <img
-                    src="/jing-with-cat-shelly.jpg"
+                    src="/jing-professional-photo.png"
                     alt="Jing profile photo"
                     className="w-full h-full object-cover"
                   />
@@ -59,47 +59,36 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Hello, I’m Jing. I’m a developer with nearly 2 years of
-                  experience in IT, and I enjoy turning ideas into digital
-                  products that are clear, practical, and built to last.
+                  I'm a developer based in Canberra, working across the
+                  front-end and back-end. I build interfaces with React and
+                  TypeScript, handle business logic in Python, and have spent a
+                  good deal of time inside content management systems such as
+                  Drupal, WordPress and CiviCRM. In that kind of work the
+                  interesting problem is rarely the code itself. It's building
+                  something non-technical people can maintain over the long term
+                  without breaking it six months later.
                 </p>
                 <p>
-                  My journey into the IT field started with a very simple
-                  curiosity: “Why does so much happen when you click a single
-                  button?” As I continued to learn by doing, that curiosity
-                  gradually turned into genuine passion. I began building
-                  projects independently, working through page structure,
-                  interaction design, data handling, deployment, and slowly
-                  bringing abstract ideas into real, working products.
+                  I came to software from advertising, and the crossover point
+                  was data. In my first role I was pulling and cleaning platform
+                  traffic data to work out what people actually did on a page,
+                  as opposed to what we assumed they did. The analysis was the
+                  interesting part, but writing the scripts that made it
+                  possible turned out to be more interesting still, and that's
+                  what sent me back to study. The advertising years didn't go to
+                  waste either. Four years of thinking about how people read a
+                  page, what they notice first, and where they give up is why I
+                  care about interface detail, and why I'd rather write
+                  documentation someone can actually follow than leave a
+                  colleague guessing.
                 </p>
                 <p>
-                  Throughout my development work, I’ve gained experience across
-                  both front-end and back-end. I use React and TypeScript to
-                  build responsive user interfaces, Python to handle business
-                  logic, and I’ve also worked with content management systems
-                  such as WordPress and Drupal, where I focus on making content
-                  easier to edit, manage, and maintain over time.
-                </p>
-                <p>
-                  My working style is practical and communication-focused. I
-                  enjoy breaking problems down, discussing requirements with
-                  others, aligning on direction, and moving forward step by
-                  step. To me, writing code is never an isolated task. it’s an
-                  ongoing process of collaboration, feedback, and refinement.
-                </p>
-                <p>
-                  Of course, my development routine isn’t only about code. Quite
-                  often, my thinking is interrupted by my cat Shelly, appearing
-                  on my keyboard or quietly sitting beside me. These small,
-                  unplanned pauses often help me step back, look at problems
-                  from a different angle, and remind me to stay patient and
-                  balanced while doing focused work.
-                </p>
-                <p>
-                  I’m now looking to join a friendly, grounded, and
-                  collaborative team, where I can continue to grow through
-                  real-world projects and contribute long-term value to both
-                  users and the people I work with.
+                  I'm continually broadening my skill set, working towards
+                  becoming a well-rounded full-stack developer who can build a
+                  considered interface and handle the logic and data behind it
+                  just as carefully. What I'm looking for is a team where I can
+                  keep growing through real projects, where questions are
+                  welcome, and where I can contribute from early on.
                 </p>
               </div>
             </div>
@@ -141,19 +130,19 @@ const About = () => {
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
-                  title: "Work Hard, Play Harder",
+                  title: "Readable over clever",
                   description:
-                    "I take my work seriously and give it my full focus, but I also believe that rest and balance matter. Staying curious, relaxed helps me do better work in the long run.",
+                    "Code gets read far more often than it gets written. If a colleague has to work out what I meant, I've made their job harder to make mine feel smarter.",
                 },
                 {
-                  title: "Collaboration",
+                  title: "Ask Early",
                   description:
-                    "Great things happen when minds come together. I value open communication and teamwork.",
+                    "I'd rather ask a question on day one than rebuild on day five. Checking a requirement takes five minutes. Building the wrong thing takes a fortnight.",
                 },
                 {
-                  title: "Lifelong Learning",
+                  title: "Leave it documented",
                   description:
-                    "Continuous learning is key. I'm always exploring new technologies and methodologies.",
+                    "The next person shouldn't have to reverse-engineer my reasoning, and often the next person is me, eight months later, with no memory of any of it.",
                 },
               ].map((value, index) => (
                 <div key={index} className="text-center">

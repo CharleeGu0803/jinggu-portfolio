@@ -223,4 +223,36 @@ export const designWorks: DesignWork[] = [
     ],
     color: "from-black to-black",
   },
+  {
+    slug: "design-greek-lawyers",
+    title: "Greek Lawyers",
+    description:
+      "A redesign of the Greek Lawyers website to improve user experience and showcase their services.",
+    intro: [
+      { type: "heading", level: 2, text: "Overview" },
+      {
+        type: "paragraph",
+        text: "FCAWA's members are accredited financial counsellors, and they almost always log in to do one specific thing: record CPD hours, find a professional supervisor, or download a particular compliance document. The existing members' area was organised by content type, which meant members had to know which category something had been filed under before they could find it. I designed the information architecture and interface for the portal homepage.",
+      },
+      {
+        type: "paragraph",
+        text: 'The page opens with "What would you like to do?" — the five highest-frequency tasks placed above the fold and named with verbs rather than section titles. Resources work at two levels: two library entry points for members who want to browse, and six direct tiles beneath for members who already know which document they need, so nobody has to enter a library and filter down to reach a single info sheet. Directories, member news and community sit lower on the page: infrequent, but they still have to be findable. The palette follows the association\'s brand — deep blue, teal and coral — using blocks of colour to separate sections rather than relying on rules and heading hierarchy.',
+      },
+    ],
+    tags: ["Figma", "UI Design", "Information Architecture", "Design System"],
+    coverImage: "/greek-lawyers-cover.webp",
+    screens: [
+      {
+        label: "Homepage",
+        image: "/greek-lawyers-home.webp",
+        caption: "Task shortcuts, resource libraries and sector directories.",
+      },
+      {
+        label: "Chapter Page",
+        image: "/greek-lawyers-chapter.webp",
+        caption: "Task shortcuts, resource libraries and sector directories.",
+      },
+    ],
+    color: "from-blue-950/20 to-teal-800/20",
+  },
 ];

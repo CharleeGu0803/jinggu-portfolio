@@ -190,69 +190,74 @@ export const designWorks: DesignWork[] = [
     slug: "design-empire-cinema",
     title: "Empire Cinema",
     description:
-      "A redesign of the Empire Cinema website to improve user experience and showcase upcoming films and events.",
+      "A concept redesign for Australia's oldest continuously running cinema, built around ticket stubs, film stock and a century of history.",
     intro: [
       { type: "heading", level: 2, text: "Overview" },
       {
         type: "paragraph",
-        text: "FCAWA's members are accredited financial counsellors, and they almost always log in to do one specific thing: record CPD hours, find a professional supervisor, or download a particular compliance document. The existing members' area was organised by content type, which meant members had to know which category something had been filed under before they could find it. I designed the information architecture and interface for the portal homepage.",
+        text: "The Empire has been showing films on Bong Bong Street in Bowral since 1915, making it the oldest continuously operating cinema on the Australian mainland. A site like this serves two people at once: the local who wants tonight's session times and nothing else, and the first-time visitor who needs parking, prices and whether the building will work for them. The history is the cinema's biggest asset, and filing it away on an About page wastes it. This is a self-initiated concept, not the current live site.",
       },
       {
         type: "paragraph",
-        text: 'The page opens with "What would you like to do?" — the five highest-frequency tasks placed above the fold and named with verbs rather than section titles. Resources work at two levels: two library entry points for members who want to browse, and six direct tiles beneath for members who already know which document they need, so nobody has to enter a library and filter down to reach a single info sheet. Directories, member news and community sit lower on the page: infrequent, but they still have to be findable. The palette follows the association\'s brand — deep blue, teal and coral — using blocks of colour to separate sections rather than relying on rules and heading hierarchy.',
+        text: "Rather than giving the history its own page, the design works it into the interface: the homepage carousel is built as a ticket stub with perforations and a tear line, the monthly highlight on What's On sits inside a strip of film sprocket holes, and the foot of the homepage carries three numbers — 1915, 110 years, 4 screens — against an archival photograph. A near-black palette with cream and gold leaves the film posters as the only saturated thing on the page. Structurally, session times appear on the second screenful of the homepage with a day switcher, so the most common task needs no navigation at all, and Visit Us collects address, hours, pricing, accessibility and venue hire into one page. The accessibility section names which cinemas are only reachable by stairs rather than claiming the building is step-free — a 110-year-old venue can't be, and saying so is more useful than a blanket statement.",
       },
     ],
-    tags: ["Figma", "UI Design", "Information Architecture", "Design System"],
+    tags: ["Figma", "UI Design", "Art Direction", "Information Architecture"],
     coverImage: "/empire-cover.webp",
     screens: [
       {
         label: "Homepage",
         image: "/empire-home.webp",
-        caption: "Task shortcuts, resource libraries and sector directories.",
-      },
-      {
-        label: "Visit Us",
-        image: "/empire-visit-us.webp",
-        caption: "Task shortcuts, resource libraries and sector directories.",
+        caption:
+          "Ticket-stub carousel, today's sessions, coming soon and the cinema's history.",
       },
       {
         label: "What's On",
         image: "/empire-what's-on.webp",
-        caption: "Task shortcuts, resource libraries and sector directories.",
+        caption:
+          "Monthly highlight, full now-showing list and live broadcast seasons.",
+      },
+      {
+        label: "Visit Us",
+        image: "/empire-visit-us.webp",
+        caption:
+          "Location, ticket pricing, accessibility detail and venue hire.",
       },
     ],
-    color: "from-black to-black",
+    color: "from-neutral-900/40 to-amber-900/20",
   },
   {
     slug: "design-greek-lawyers",
-    title: "Greek Lawyers",
+    title: "Hellenic Australian Lawyers",
     description:
-      "A redesign of the Greek Lawyers website to improve user experience and showcase their services.",
+      "A concept redesign for HAL, a national association of Greek-Australian lawyers running eight state and territory chapters.",
     intro: [
       { type: "heading", level: 2, text: "Overview" },
       {
         type: "paragraph",
-        text: "FCAWA's members are accredited financial counsellors, and they almost always log in to do one specific thing: record CPD hours, find a professional supervisor, or download a particular compliance document. The existing members' area was organised by content type, which meant members had to know which category something had been filed under before they could find it. I designed the information architecture and interface for the portal homepage.",
+        text: "HAL brings together lawyers, judicial officers and law students across Australia, along with anyone else with a connection to Greece. The structural problem is that eight states and territories each run their own chapter, their own committee and their own programme, but there is only one website. People arrive wanting one of three things: to find out whether they can join, to see what's on in their state, or to find a lawyer who speaks Greek. Organising the site around how the association is structured means a visitor has to understand the organisation before they can get to their answer. This is a self-initiated concept, not the live site.",
       },
       {
         type: "paragraph",
-        text: 'The page opens with "What would you like to do?" — the five highest-frequency tasks placed above the fold and named with verbs rather than section titles. Resources work at two levels: two library entry points for members who want to browse, and six direct tiles beneath for members who already know which document they need, so nobody has to enter a library and filter down to reach a single info sheet. Directories, member news and community sit lower on the page: infrequent, but they still have to be findable. The palette follows the association\'s brand — deep blue, teal and coral — using blocks of colour to separate sections rather than relying on rules and heading hierarchy.',
+        text: "The homepage skips that step with \"What brings you to HAL?\" — three routes for practising lawyers, students and people looking for representation, each going straight where it needs to. Chapters aren't eight separate sub-sites but a single grid plus one combined event timeline, with a state tag on every entry, so anyone practising across borders can read the whole country at once. The orations get their own band on the homepage rather than being filed under Insights: they're the association's most substantial content, judges and scholars on the record, and they're free to read and cite. Deep navy with gold-brown throughout, a Greek key pattern as a section divider, olive branches and columns used sparingly. The heritage has to be visible, but it can't outweigh the restraint the profession expects.",
       },
     ],
-    tags: ["Figma", "UI Design", "Information Architecture", "Design System"],
+    tags: ["Figma", "UI Design", "Information Architecture", "Art Direction"],
     coverImage: "/greek-lawyers-cover.webp",
     screens: [
       {
         label: "Homepage",
         image: "/greek-lawyers-home.webp",
-        caption: "Task shortcuts, resource libraries and sector directories.",
+        caption:
+          "Audience routing, upcoming events, published orations and the mentoring programme.",
       },
       {
         label: "Chapter Page",
         image: "/greek-lawyers-chapter.webp",
-        caption: "Task shortcuts, resource libraries and sector directories.",
+        caption:
+          "Eight-chapter directory with a combined, state-tagged event calendar.",
       },
     ],
-    color: "from-blue-950/20 to-teal-800/20",
+    color: "from-blue-950/20 to-amber-900/20",
   },
 ];

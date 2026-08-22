@@ -44,7 +44,7 @@ export const projects: Project[] = [
       "Git",
       "DDEV",
     ],
-    image: "/canberra-rep-home.jpg",
+    image: "/canberra-rep-home.webp",
     demoNote: "Deployment in progress,live website coming soon",
     color: "from-blue-500/20 to-purple-500/20",
     featured: true,

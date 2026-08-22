@@ -41,33 +41,33 @@ export const designWorks: DesignWork[] = [
       },
     ],
     tags: ["Figma", "UI Design", "Design System", "Responsive", "WCAG 2.1 AA"],
-    coverImage: "/canberra-rep-home.jpg",
+    coverImage: "/canberra-rep-home.webp",
     screens: [
       {
         label: "Homepage",
-        image: "/canberrarep-home.png",
+        image: "/canberrarep-home.webp",
         caption:
           "Current and upcoming productions, with booking as the primary action.",
       },
       {
         label: "Show Details",
-        image: "/canberrarep-show-details.png",
+        image: "/canberrarep-show-details.webp",
         caption:
           "Synopsis, cast and creatives, session times and prices on one page.",
       },
       {
         label: "Booking Page",
-        image: "/canberrarep-book.png",
+        image: "/canberrarep-book.webp",
         caption: "Browse productions and find supporting booking information.",
       },
       {
         label: "Booking Details Page",
-        image: "/canberrarep-book-details.png",
+        image: "/canberrarep-book-show.webp",
         caption: "Synopsis and session times, with a direct path to booking.",
       },
       {
         label: "Standard Page",
-        image: "/canberrarep-standard.png",
+        image: "/canberrarep-standard.webp",
         caption:
           "Content template for About, membership and venue information.",
       },

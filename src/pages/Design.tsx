@@ -20,11 +20,10 @@ const Design = () => {
             <div className="mt-8 rounded-lg border border-border bg-secondary/40 px-4 py-3 flex gap-3 text-left">
               <Info className="w-4 h-4 mt-0.5 text-muted-foreground shrink-0" />
               <p className="text-sm text-muted-foreground">
-                The work shown on this page is from projects that have been
-                publicly launched. Copyright in these works is owned by
-                Agileware Pty Ltd. They are presented here solely to illustrate
-                my role and contribution, and do not constitute any licence,
-                assignment, or offer for commercial use.
+                Copyright in these works is owned by Agileware Pty Ltd. They are
+                presented here solely to illustrate my role and contribution,
+                and do not constitute any licence, assignment, or offer for
+                commercial use.
               </p>
             </div>
           </div>

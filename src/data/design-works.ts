@@ -41,33 +41,33 @@ export const designWorks: DesignWork[] = [
       },
     ],
     tags: ["Figma", "UI Design", "Design System", "Responsive", "WCAG 2.1 AA"],
-    coverImage: "/canberra-rep-home.jpg",
+    coverImage: "/canberra-rep-home.webp",
     screens: [
       {
         label: "Homepage",
-        image: "/canberrarep-home.png",
+        image: "/canberrarep-home.webp",
         caption:
           "Current and upcoming productions, with booking as the primary action.",
       },
       {
         label: "Show Details",
-        image: "/canberrarep-show-details.png",
+        image: "/canberrarep-show-details.webp",
         caption:
           "Synopsis, cast and creatives, session times and prices on one page.",
       },
       {
         label: "Booking Page",
-        image: "/canberrarep-book.png",
+        image: "/canberrarep-book.webp",
         caption: "Browse productions and find supporting booking information.",
       },
       {
         label: "Booking Details Page",
-        image: "/canberrarep-book-details.png",
+        image: "/canberrarep-book-show.webp",
         caption: "Synopsis and session times, with a direct path to booking.",
       },
       {
         label: "Standard Page",
-        image: "/canberrarep-standard.png",
+        image: "/canberrarep-standard.webp",
         caption:
           "Content template for About, membership and venue information.",
       },
@@ -97,23 +97,29 @@ export const designWorks: DesignWork[] = [
       "Information Architecture",
       "UX Writing",
     ],
-    coverImage: "/agileware-cover.jpg",
+    coverImage: "/agileware-cover.webp",
     screens: [
       {
         label: "Homepage",
-        image: "/agileware-home.png",
+        image: "/agileware-home.webp",
         caption:
           "Service entry points framed as client questions, with case studies and resources.",
       },
       {
+        label: "CiviCRM Page",
+        image: "/agileware-civicrm.webp",
+        caption:
+          "CiviCRM services: lifecycle breakdown, migration steps, partner credentials and a case study.",
+      },
+      {
         label: "Service Page",
-        image: "/agileware-service.png",
+        image: "/agileware-service.webp",
         caption:
           "Member portals: capabilities, systems diagram, case study and FAQs.",
       },
       {
         label: "Contact Page",
-        image: "/agileware-contact-us.png",
+        image: "/agileware-contact-us.webp",
         caption: "Enquiry form with routing fields, alongside contact details.",
       },
     ],
@@ -136,17 +142,17 @@ export const designWorks: DesignWork[] = [
       },
     ],
     tags: ["Figma", "UI Design", "Art Direction", "Responsive"],
-    coverImage: "/pork-star-cover.jpg",
+    coverImage: "/pork-star-cover.webp",
     screens: [
       {
         label: "Homepage",
-        image: "/pork-star-home.png",
+        image: "/pork-star-home.webp",
         caption:
           "Content bands for events, recipes and industry tools, with the navigation open.",
       },
       {
         label: "Campaign Page",
-        image: "/pork-star-campaign.png",
+        image: "/pork-star-campaign.webp",
         caption:
           "Current campaign, featured chef and an archive of past campaigns.",
       },
@@ -170,14 +176,88 @@ export const designWorks: DesignWork[] = [
       },
     ],
     tags: ["Figma", "UI Design", "Information Architecture", "Design System"],
-    coverImage: "/fcawa-cover.jpg",
+    coverImage: "/fcawa-cover.webp",
     screens: [
       {
         label: "Homepage",
-        image: "/fcawa-home.png",
+        image: "/fcawa-home.webp",
         caption: "Task shortcuts, resource libraries and sector directories.",
       },
     ],
     color: "from-blue-900/20 to-teal-800/20",
+  },
+  {
+    slug: "design-empire-cinema",
+    title: "Empire Cinema",
+    description:
+      "A concept redesign for Australia's oldest continuously running cinema, built around ticket stubs, film stock and a century of history.",
+    intro: [
+      { type: "heading", level: 2, text: "Overview" },
+      {
+        type: "paragraph",
+        text: "The Empire has been showing films on Bong Bong Street in Bowral since 1915, making it the oldest continuously operating cinema on the Australian mainland. A site like this serves two people at once: the local who wants tonight's session times and nothing else, and the first-time visitor who needs parking, prices and whether the building will work for them. The history is the cinema's biggest asset, and filing it away on an About page wastes it. This is a self-initiated concept, not the current live site.",
+      },
+      {
+        type: "paragraph",
+        text: "Rather than giving the history its own page, the design works it into the interface: the homepage carousel is built as a ticket stub with perforations and a tear line, the monthly highlight on What's On sits inside a strip of film sprocket holes, and the foot of the homepage carries three numbers — 1915, 110 years, 4 screens — against an archival photograph. A near-black palette with cream and gold leaves the film posters as the only saturated thing on the page. Structurally, session times appear on the second screenful of the homepage with a day switcher, so the most common task needs no navigation at all, and Visit Us collects address, hours, pricing, accessibility and venue hire into one page. The accessibility section names which cinemas are only reachable by stairs rather than claiming the building is step-free — a 110-year-old venue can't be, and saying so is more useful than a blanket statement.",
+      },
+    ],
+    tags: ["Figma", "UI Design", "Art Direction", "Information Architecture"],
+    coverImage: "/empire-cover.webp",
+    screens: [
+      {
+        label: "Homepage",
+        image: "/empire-home.webp",
+        caption:
+          "Ticket-stub carousel, today's sessions, coming soon and the cinema's history.",
+      },
+      {
+        label: "What's On",
+        image: "/empire-what's-on.webp",
+        caption:
+          "Monthly highlight, full now-showing list and live broadcast seasons.",
+      },
+      {
+        label: "Visit Us",
+        image: "/empire-visit-us.webp",
+        caption:
+          "Location, ticket pricing, accessibility detail and venue hire.",
+      },
+    ],
+    color: "from-neutral-900/40 to-amber-900/20",
+  },
+  {
+    slug: "design-greek-lawyers",
+    title: "Hellenic Australian Lawyers",
+    description:
+      "A concept redesign for HAL, a national association of Greek-Australian lawyers running eight state and territory chapters.",
+    intro: [
+      { type: "heading", level: 2, text: "Overview" },
+      {
+        type: "paragraph",
+        text: "HAL brings together lawyers, judicial officers and law students across Australia, along with anyone else with a connection to Greece. The structural problem is that eight states and territories each run their own chapter, their own committee and their own programme, but there is only one website. People arrive wanting one of three things: to find out whether they can join, to see what's on in their state, or to find a lawyer who speaks Greek. Organising the site around how the association is structured means a visitor has to understand the organisation before they can get to their answer. This is a self-initiated concept, not the live site.",
+      },
+      {
+        type: "paragraph",
+        text: "The homepage skips that step with \"What brings you to HAL?\" — three routes for practising lawyers, students and people looking for representation, each going straight where it needs to. Chapters aren't eight separate sub-sites but a single grid plus one combined event timeline, with a state tag on every entry, so anyone practising across borders can read the whole country at once. The orations get their own band on the homepage rather than being filed under Insights: they're the association's most substantial content, judges and scholars on the record, and they're free to read and cite. Deep navy with gold-brown throughout, a Greek key pattern as a section divider, olive branches and columns used sparingly. The heritage has to be visible, but it can't outweigh the restraint the profession expects.",
+      },
+    ],
+    tags: ["Figma", "UI Design", "Information Architecture", "Art Direction"],
+    coverImage: "/greek-lawyers-cover.webp",
+    screens: [
+      {
+        label: "Homepage",
+        image: "/greek-lawyers-home.webp",
+        caption:
+          "Audience routing, upcoming events, published orations and the mentoring programme.",
+      },
+      {
+        label: "Chapter Page",
+        image: "/greek-lawyers-chapter.webp",
+        caption:
+          "Eight-chapter directory with a combined, state-tagged event calendar.",
+      },
+    ],
+    color: "from-blue-950/20 to-amber-900/20",
   },
 ];
